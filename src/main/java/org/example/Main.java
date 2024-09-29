@@ -1,6 +1,8 @@
 package org.example;
 
 
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -8,16 +10,46 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         //System.out.printf("Hello and welcome!");
+        Scanner in= new Scanner(System.in);
         System.out.println("Task 1");
-        System.out.println(triangle(7,4,9));
+        System.out.print("a=");
+        float a= in.nextFloat();
+        System.out.print("b=");
+        float b= in.nextFloat();
+        System.out.print("c=");
+        float c= in.nextFloat();
+        //System.out.println(triangle(7,4,9));
+        System.out.println(triangle(a,b,c));
         System.out.println("Task 2");
-        System.out.println(distance(0,0,1,1));
+        System.out.print("x1=");
+        float x1= in.nextFloat();
+        System.out.print("y1=");
+        float y1= in.nextFloat();
+        System.out.print("x2=");
+        float x2= in.nextFloat();
+        System.out.print("y2=");
+        float y2= in.nextFloat();
+        //System.out.println(distance(0,0,1,1));
+        System.out.println(distance(x1,y1,x2,y2));
         System.out.println("Task 3");
-        System.out.println(powerLoop(2,-4));
+        System.out.print("a=");
+        a= in.nextFloat();
+        System.out.print("n=");
+        int n= in.nextInt();
+        //System.out.println(powerLoop(2,-4));
+        System.out.println(powerLoop(a,n));
         System.out.println("Task 4");
-        System.out.println(power(2,4));
+        System.out.print("a=");
+        a= in.nextFloat();
+        System.out.print("n=");
+        n= in.nextInt();
+        //System.out.println(power(2,4));
+        System.out.println(power(a,n));
         System.out.println("Task 5");
-        System.out.println(tribonacci(7));
+        System.out.print("n=");
+        n= in.nextInt();
+        //System.out.println(tribonacci(7));
+        System.out.println(tribonacci(n));
     }
 //    public static boolean triangle(float a, float b, float c){
 //        return triangle(a,b,c,0);
