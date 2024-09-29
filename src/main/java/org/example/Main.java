@@ -10,6 +10,7 @@ public class Main {
         System.out.println(triangle(7,4,9));
         System.out.println(tribonacci(7));
         System.out.println(distance(0,0,1,1));
+        System.out.println(powerLoop(2,-4));
     }
     public static boolean triangle(float a, float b, float c){
         return triangle(a,b,c,0);
@@ -31,6 +32,18 @@ public class Main {
     }
     public static double distance(float x1, float y1, float x2, float y2){
         return Math.sqrt(Math.pow((x1-x2),2)+Math.pow((y1-y2),2));
+    }
+    public static float powerLoop(float a,int n){
+        if(n==1) return a;
+        if(n==0) return 1F;
+        if(n<0) return 1/powerLoop(a,n*-1);
+        return a*powerLoop(a,n-1);
+    }
+    public static Float power(float a,int n){
+        if(n==1) return a;
+        if(n==0) return 1F;
+        if(n<0) return null;
+        return a*power(a,n-1);
     }
     public static int tribonacci (int n){
         if (n==0){return 0;}
